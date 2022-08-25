@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+  >
+
+    <data>
+        <variable
+            name="userData"
+            type="com.example.applaunch.database.User" />
+
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardElevation="5dp"
+        android:id="@+id/userCard"
+        app:cardCornerRadius="14dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/skip_button_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fName"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:text="@{userData.FName}"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Yashendra " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lName"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:textSize="20sp"
+                android:text="@{userData.LName}"
+                android:textAlignment="center"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Shukla " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/emailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:text="@{userData.emailId}"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/fName"
+                app:layout_constraintTop_toBottomOf="@id/fName"
+                tools:text="Yashendrashukla.2069@gmail.com" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

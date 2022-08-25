@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.UserFormFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/formTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="User Form"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:hint="First"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.195"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/formTxt"
+            app:layout_constraintVertical_bias="0.093" />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:hint="Last"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.795"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/formTxt"
+            app:layout_constraintVertical_bias="0.093" />
+
+        <EditText
+            android:id="@+id/emailId"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/formTxt"
+            app:layout_constraintVertical_bias="0.253" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="148dp"
+            android:text="Save"
+            android:background="@color/purple_700"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailId" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
+            android:background="@color/teal_700"
+            android:layout_marginTop="148dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailId" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

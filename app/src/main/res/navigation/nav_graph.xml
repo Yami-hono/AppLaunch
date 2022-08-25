@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/boardingFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.applaunch.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.example.applaunch.fragment.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_userListFragment_to_userFormFragment"
+            app:destination="@id/userFormFragment" />
+        <action
+            android:id="@+id/action_userListFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFormFragment"
+        android:name="com.example.applaunch.fragment.UserFormFragment"
+        android:label="fragment_user_form"
+        tools:layout="@layout/fragment_user_form" >
+        <action
+            android:id="@+id/action_userFormFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boardingFragment"
+        android:name="com.example.applaunch.fragment.BoardingFragment"
+        android:label="fragment_boarding"
+        tools:layout="@layout/fragment_boarding" >
+        <action
+            android:id="@+id/action_boardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_boardingFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.applaunch.fragment.WeatherFragment"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather" >
+        <action
+            android:id="@+id/action_weatherFragment_to_boardingFragment"
+            app:destination="@id/boardingFragment" />
+    </fragment>
+</navigation>
